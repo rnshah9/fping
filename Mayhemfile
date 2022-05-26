@@ -1,0 +1,5 @@
+project: rnshah9/fping
+target: fping
+
+cmds:
+  - cmd: /repo/src/fping
