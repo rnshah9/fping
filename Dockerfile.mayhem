@@ -8,12 +8,3 @@ WORKDIR /repo
 RUN ./autogen.sh
 RUN ./configure
 RUN make -j8
-
-RUN mkdir -p /deps
-RUN ldd /repo/src/fping | tr -s '[:blank:]' '\n' | grep '^/' | xargs -I % sh -c 'cp % /deps;'
-
-FROM ubuntu:22.04 as package
-
-COPY --from=builder /deps /deps
-COPY --from=builder /repo/src/fping /repo/src/fping
-ENV LD_LIBRARY_PATH=/deps
