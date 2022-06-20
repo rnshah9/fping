@@ -1,4 +1,4 @@
-project: rnshah9/fping
+project: fping
 target: fping
 
 cmds:
