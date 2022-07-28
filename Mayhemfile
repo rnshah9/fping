@@ -2,4 +2,4 @@ project: fping
 target: fping
 
 cmds:
-  - cmd: /repo/src/fping
+  - cmd: /install/sbin/fping
