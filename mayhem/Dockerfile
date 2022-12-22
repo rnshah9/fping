@@ -9,5 +9,6 @@ RUN ./autogen.sh
 RUN ./configure
 RUN make -j8
 
+# RUN rm -rf /var/lib/apt/lists/*
 FROM --platform=linux/amd64 ubuntu:22.04 as package
-COPY --from=builder /repo/src/fping /repo/src/fping
+COPY --from=builder /repo /repo
