@@ -1,5 +1,5 @@
 project: fping
-target: fping3
+target: fping
 
 cmds:
   - cmd: /repo/src/fping
